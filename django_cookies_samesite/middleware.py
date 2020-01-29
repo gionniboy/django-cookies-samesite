@@ -60,6 +60,6 @@ class CookiesSameSite(MiddlewareMixin):
 
         for cookie in protected_cookies:
             if cookie in response.cookies:
-                response.cookies[cookie]['samesite'] = samesite_flag.lower()
+                response.cookies[cookie]['samesite'] = samesite_flag.lower().capitalize()
 
         return response
